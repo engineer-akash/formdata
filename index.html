@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+	  body{
+		font-family: 'Poppins',sans-serif;
+		background-color: rgb(163, 163, 243);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	  }
+
+	.container{
+		width: 400px;
+		padding: 10px;
+		margin: 10px;
+		height: 330px;
+		display: flex;
+		background-color: #fff;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		border: 1px solid black;
+
+	}
+	.container .button{
+		width: 90%;
+
+	}
+	.container .button #btn{
+		width: 100%;
+		border-color: transparent;
+		outline: none;
+		border-radius: 4px;
+		color: #fff;
+		height: 38px;
+		background-color: rgb(111, 111, 206);
+		font-size: 15px;
+		font-family: 'Poppins',sans-serif;
+		font-weight: bold;
+	}
+	.name,.email,.password,.dob{
+		width: 90%;
+		/* height: 30px; */
+		/* background-color: red; */
+		margin: 10px;
+	}
+	.container .name #name{
+		width: 100%;
+		height: 22px;
+		padding: 5px;
+	}
+	.container .email #email{
+		width: 100%;
+		height: 22px;
+
+		padding: 5px;
+	}
+	.container .password #password{
+
+		height: 22px;
+		width: 100%;
+		padding: 5px;
+	}
+	.container .name{
+		display: flex;
+		align-items: center;
+		
+	}
+	.container .head{
+		font-size: 20px;
+		font-family: 'Poppins',sans-serif;
+		font-weight: bold;
+	}
+	.container .email{
+		display: flex;
+		align-items: center;
+	}
+	.container .password{
+		display: flex;
+		align-items: center;
+	}
+	.container #password{
+		width: 100%;
+		height: 30px;
+	}
+	.i-c{
+		width: 100%;
+	}
+	.dob{
+		width: 90%;
+		/* margin: 0; */
+		display: flex;
+		align-items: center;
+		padding-bottom: 5px;
+	}
+	.container .dob #dob{
+		width: 100%;
+		height: 22px;
+		padding: 5px;
+	}
+	.i-c #tabel{
+		background-color: #fff;
+		width: 100%;
+	}
+	#t-b{
+		font-size: 14px;
+		color: black;
+		font-family: "Poppins",sans-serif;
+
+	}
+	.container .name{
+		/* animation-name: inputeerror; */
+		position: relative;
+	}
+	#name:invalid{
+		/* animation-name: inputeerror; */
+animation-duration: 0.5s;
+transition: transform 0.5s;
+/* background-color: red; */
+	}
+	/* #email:invalid{
+		animation-name: inputeerror;
+animation-duration: 0.5s;
+transition: transform 0.5s;
+background-color: red;
+	} */
+	@keyframes inputeerror {
+		25%{
+			transform: translateX(-5px);
+		}
+		50%{
+transform: translateX(5px);
+		}
+		75%{
+transform: translateX(-5px);
+		}
+		100%{
+   transform: translateX(0px);
+		}
+		
+	}
+	#tabel{
+		text-align: center;
+	}
+	.container .r{
+		width: 90%;
+		height: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	
+</style>
+<body>
+	<div class="container">
+		<div class="head">Input form</div>
+		<div class="name">	<input type="text" name=""id="name"placeholder="Name"max="1-2-2023" required ></div>
+		<div class="email"><input type="email" pattern="[]*#" id="email"placeholder="email-@" required></div>
+		<div class="password"><input type="password" name="" id="password"placeholder="Password.."></div>
+		<div class="dob"><input type="date"min="1968-02-14"max="2005-02-14" id="dob"placeholder="Number"></div>
+		<div class="r"><input type="checkbox" name="" id="in"> <label for="in"required>Remmeber me</label></div>
+
+		<div class="button"><button id="btn">Sumbit</button></div>
+	</div>
+	<div class="i-c"id="i-c">
+		<table border="1"id="tabel">
+			<th >Name</th>
+			<th>Email</th>
+			<th>Phone No.</th>
+			<th>Date of birth</th>
+			<th>Accepted?</th>
+
+              
+			<tbody id="t-b">
+				<tr align="center"></tr>
+
+			</tbody>
+		</table>
+	</div>
+	<script src="a.js"></script>
+</body>
+</html>
